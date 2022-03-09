@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-
     private lateinit var btnSetValue: Button
     private lateinit var tvText: TextView
 
