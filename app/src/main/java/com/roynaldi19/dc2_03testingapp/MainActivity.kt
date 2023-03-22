@@ -1,4 +1,4 @@
-package com.roynaldi19.bfaa01_03testingapp
+package com.roynaldi19.dc2_03testingapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
