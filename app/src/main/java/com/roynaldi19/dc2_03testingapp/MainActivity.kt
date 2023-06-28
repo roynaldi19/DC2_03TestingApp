@@ -6,10 +6,10 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import com.roynaldi19.dc2_03testingapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-    private lateinit var btnSetValue: Button
-    private lateinit var tvText: TextView
+    private lateinit var binding: ActivityMainBinding
 
     private var names = ArrayList<String>()
 
@@ -17,10 +17,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnSetValue = findViewById(R.id.btn_set_value)
-        tvText = findViewById(R.id.tv_text)
-
-        btnSetValue.setOnClickListener(this)
+        binding.btnSetValue.setOnClickListener(this)
 
         names.add("Roy")
         names.add("Naldi")
@@ -28,13 +25,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View) {
-        if (view.id == R.id.btn_set_value) {
+        if (view.id == binding.btnSetValue.id) {
             Log.d("MainActivity", names.toString())
             val name = StringBuilder()
             for (i in 0..2) {
                 name.append(names[i]).append("\n")
             }
-            tvText.text = name.toString()
+            binding.tvText.text = name.toString()
         }
     }
 }
